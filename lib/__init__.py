@@ -1,14 +1,14 @@
-"""
-finance2.lib - Reusable S&P 500 Technical Analysis Library
-===========================================================
-Modules:
-    data        - Stock universe definition and data fetching
-    indicators  - Raw technical indicator calculations
-    scoring     - Indicator scoring functions and composite weighting
-    display     - Formatting and visualisation helpers
+"""lib – reusable building blocks for the S&P 500 analyser notebook.
+
+Modules
+-------
+data         : ticker universe, OHLCV fetching, top-N by market cap
+indicators   : technical indicator calculations (RSI, MACD, Bollinger, …)
+scoring      : technical scoring, fundamental blending, signal classification
+fundamentals : fundamental data fetching and scoring (P/E, ROE, growth, …)
+display      : terminal output and matplotlib visualisations
 """
 
-from . import data, indicators, scoring, display
+from lib import data, indicators, scoring, fundamentals, display
 
-__version__ = "1.0.0"
-__all__ = ["data", "indicators", "scoring", "display"]
+__all__ = ["data", "indicators", "scoring", "fundamentals", "display"]
